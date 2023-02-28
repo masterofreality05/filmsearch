@@ -16,7 +16,7 @@ const $searchForm = $("#search-form");
  */
 async function getShowsByTerm(term) { //aka searchShows
   // ADD: Remove placeholder & make request to TVMaze search shows API.
-  let query = term
+let query = term
 let searchedFilm = await axios.get('https://api.tvmaze.com/search/shows', {params: {q:query}})
 
 return(searchedFilm.data)
